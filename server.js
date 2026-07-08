@@ -1,9 +1,10 @@
 
 import express from 'express'
 import fs from 'fs'
+import cors from 'cors'
 const app = express()
 
-app.use(express.json())
+app.use(cors())
 const readData = ((filename) => JSON.parse(fs.readFileSync(`./data/${filename}`, 'utf-8')))
 
 const writeData = ((filename, data) => fs.writeFileSync(`./data/${filename}`, JSON.stringify(data, null, 2)))
@@ -120,5 +121,5 @@ app.delete('/api/timeline/:id', (req, resp) => {
     resp.json({ success: true })
 })
 
- const PORT = process.env.PORT || 5000
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
+ const PORT = 5000;
+app.listen(PORT || 5000)

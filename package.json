@@ -1,0 +1,29 @@
+{
+  "name": "mybackend",
+  "version": "1.0.0",
+  "description": "this is the backend of my first real app.",
+  "keywords": [
+    "backend",
+    "realproject"
+  ],
+  "homepage": "https://github.com/iftikhar115/backend#readme",
+  "bugs": {
+    "url": "https://github.com/iftikhar115/backend/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iftikhar115/backend.git"
+  },
+  "license": "ISC",
+  "author": "iftikhar hussain",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm run",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1"
+  }
+}
